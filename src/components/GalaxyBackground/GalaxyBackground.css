@@ -1,0 +1,711 @@
+/* ==========================================
+   LIQUID SHADOW BACKGROUND
+========================================== */
+.background{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    pointer-events:none;
+
+    z-index:0;
+
+    background:#080a0f;
+}
+
+/* ==========================
+   BASE GRADIENT
+========================== */
+
+.bg-gradient{
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 15% 20%,
+    rgba(65,80,120,.10),
+    transparent 38%),
+
+    radial-gradient(circle at 85% 80%,
+    rgba(55,70,110,.08),
+    transparent 42%),
+
+    linear-gradient(
+    180deg,
+    #10141d 0%,
+    #0b0f17 45%,
+    #080a0f 100%);
+}
+
+/* ==========================
+   COMMON BLOB
+========================== */
+
+.blob{
+
+    position:absolute;
+
+    border-radius:
+    42% 58% 60% 40% /
+    38% 42% 58% 62%;
+
+    filter:blur(90px);
+
+    opacity:.45;
+
+    will-change:transform;
+
+    animation-timing-function:ease-in-out;
+
+    animation-iteration-count:infinite;
+
+}
+
+/* ==========================
+   BLOB 1
+========================== */
+
+.blob1{
+
+    width:700px;
+    height:700px;
+
+    top:-220px;
+    left:-180px;
+
+    background:
+    radial-gradient(circle,
+    rgba(72,92,135,.18),
+    rgba(50,65,100,.08),
+    transparent 72%);
+
+    animation:blobOne 55s infinite;
+}
+
+/* ==========================
+   BLOB 2
+========================== */
+
+.blob2{
+
+    width:620px;
+    height:620px;
+
+    right:-180px;
+    top:8%;
+
+    background:
+    radial-gradient(circle,
+    rgba(85,105,145,.16),
+    rgba(55,70,100,.08),
+    transparent 72%);
+
+    animation:blobTwo 62s infinite;
+}
+
+/* ==========================
+   BLOB 3
+========================== */
+
+.blob3{
+
+    width:760px;
+    height:760px;
+
+    bottom:-320px;
+    left:25%;
+
+    background:
+    radial-gradient(circle,
+    rgba(60,78,118,.12),
+    transparent 72%);
+
+    animation:blobThree 70s infinite;
+}
+/* ==========================================
+   LIQUID SHADOW BACKGROUND
+   PART 2
+========================================== */
+
+
+/* ==========================
+   BLOB 4
+========================== */
+
+.blob4{
+
+    width:560px;
+    height:560px;
+
+    left:58%;
+    top:45%;
+
+    background:
+    radial-gradient(circle,
+    rgba(92,110,145,.10),
+    transparent 72%);
+
+    animation:blobFour 68s infinite;
+}
+
+
+/* ==========================
+   BLOB 5
+========================== */
+
+.blob5{
+
+    width:480px;
+    height:480px;
+
+    bottom:-120px;
+    right:12%;
+
+    background:
+    radial-gradient(circle,
+    rgba(115,128,165,.08),
+    transparent 70%);
+
+    opacity:.30;
+
+    animation:blobFive 80s infinite;
+}
+
+
+/* ==========================
+   AMBIENT LIGHT
+========================== */
+
+.ambient{
+
+    position:absolute;
+    border-radius:50%;
+    filter:blur(130px);
+    opacity:.14;
+    will-change:transform;
+
+}
+
+.ambient1{
+
+    width:240px;
+    height:240px;
+
+    top:18%;
+    left:42%;
+
+    background:#a6b7d9;
+
+    animation:ambientOne 30s ease-in-out infinite;
+
+}
+
+.ambient2{
+
+    width:200px;
+    height:200px;
+
+    bottom:15%;
+    right:18%;
+
+    background:#7d90b8;
+
+    animation:ambientTwo 36s ease-in-out infinite;
+
+}
+
+
+/* ==========================
+   GRAIN
+========================== */
+
+.grain{
+
+    position:absolute;
+    inset:0;
+
+    opacity:.025;
+
+    background-image:
+
+    radial-gradient(circle, rgba(255,255,255,.35) .8px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,.20) .8px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,.25) .7px, transparent 1px);
+
+    background-size:
+    260px 260px,
+    340px 340px,
+    420px 420px;
+
+    background-position:
+    0 0,
+    120px 80px,
+    220px 160px;
+
+    animation:grainMove 45s linear infinite;
+
+}
+
+
+/* ==========================
+   VIGNETTE
+========================== */
+
+.vignette{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+        ellipse,
+        transparent 55%,
+        rgba(0,0,0,.18) 78%,
+        rgba(0,0,0,.38) 100%
+    );
+
+}
+/* ==========================================
+   LIQUID SHADOW BACKGROUND
+   PART 3
+   ANIMATIONS
+========================================== */
+
+
+/* ==========================
+   BLOB ANIMATIONS
+========================== */
+
+@keyframes blobOne{
+
+    0%{
+        transform:
+        translate(0,0)
+        scale(1)
+        rotate(0deg);
+    }
+
+    50%{
+        transform:
+        translate(80px,60px)
+        scale(1.12)
+        rotate(20deg);
+    }
+
+    100%{
+        transform:
+        translate(0,0)
+        scale(1)
+        rotate(0deg);
+    }
+
+}
+
+
+
+@keyframes blobTwo{
+
+    0%{
+        transform:
+        translate(0,0)
+        scale(1);
+    }
+
+    50%{
+        transform:
+        translate(-90px,70px)
+        scale(1.08)
+        rotate(-25deg);
+    }
+
+    100%{
+        transform:
+        translate(0,0)
+        scale(1);
+    }
+
+}
+
+
+
+@keyframes blobThree{
+
+    0%{
+        transform:
+        translate(0,0)
+        scale(1);
+    }
+
+    50%{
+        transform:
+        translate(-70px,-80px)
+        scale(1.15)
+        rotate(18deg);
+    }
+
+    100%{
+        transform:
+        translate(0,0)
+        scale(1);
+    }
+
+}
+
+
+
+@keyframes blobFour{
+
+    0%{
+        transform:
+        translate(0,0)
+        scale(1);
+    }
+
+    50%{
+        transform:
+        translate(100px,-50px)
+        scale(1.1)
+        rotate(-18deg);
+    }
+
+    100%{
+        transform:
+        translate(0,0)
+        scale(1);
+    }
+
+}
+
+
+
+@keyframes blobFive{
+
+    0%{
+        transform:
+        translate(0,0)
+        scale(1);
+    }
+
+    50%{
+        transform:
+        translate(-60px,-40px)
+        scale(1.14)
+        rotate(30deg);
+    }
+
+    100%{
+        transform:
+        translate(0,0)
+        scale(1);
+    }
+
+}
+
+
+
+/* ==========================
+   AMBIENT ANIMATION
+========================== */
+
+
+@keyframes ambientOne{
+
+    0%{
+        transform:
+        translateY(0);
+    }
+
+    50%{
+        transform:
+        translateY(-45px)
+        translateX(35px);
+    }
+
+    100%{
+        transform:
+        translateY(0);
+    }
+
+}
+
+
+
+@keyframes ambientTwo{
+
+    0%{
+        transform:
+        translate(0,0);
+    }
+
+    50%{
+        transform:
+        translate(-35px,40px);
+    }
+
+    100%{
+        transform:
+        translate(0,0);
+    }
+
+}
+
+
+
+/* ==========================
+   GRAIN MOVEMENT
+========================== */
+
+
+@keyframes grainMove{
+
+    0%{
+        transform:
+        translate(0,0);
+    }
+
+    100%{
+        transform:
+        translate(-120px,-100px);
+    }
+
+}
+/* ==========================================
+   LIQUID SHADOW BACKGROUND
+   PART 4 - FINAL POLISH
+========================================== */
+
+
+/* ==========================
+   PERFORMANCE OPTIMIZATION
+========================== */
+
+.background,
+.blob,
+.ambient,
+.grain{
+
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+
+    transform:translateZ(0);
+
+}
+
+
+/* ==========================
+   LARGE SCREENS
+========================== */
+
+@media (min-width:1600px){
+
+    .blob1{
+        width:950px;
+        height:950px;
+    }
+
+
+    .blob2{
+        width:850px;
+        height:850px;
+    }
+
+
+    .blob3{
+        width:1000px;
+        height:1000px;
+    }
+
+
+    .blob4{
+        width:750px;
+        height:750px;
+    }
+
+}
+
+
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width:1024px){
+
+
+    .blob{
+
+        filter:blur(75px);
+
+        opacity:.38;
+
+    }
+
+
+    .blob1{
+
+        width:600px;
+        height:600px;
+
+        left:-220px;
+
+    }
+
+
+    .blob2{
+
+        width:550px;
+        height:550px;
+
+        right:-220px;
+
+    }
+
+
+    .blob3{
+
+        width:650px;
+        height:650px;
+
+    }
+
+
+    .ambient{
+
+        filter:blur(100px);
+
+    }
+
+}
+
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:768px){
+
+
+    .blob{
+
+        filter:blur(60px);
+
+        opacity:.30;
+
+    }
+
+
+
+    .blob1{
+
+        width:450px;
+        height:450px;
+
+        top:-170px;
+        left:-170px;
+
+    }
+
+
+
+    .blob2{
+
+        width:420px;
+        height:420px;
+
+        right:-160px;
+        top:20%;
+
+    }
+
+
+
+    .blob3{
+
+        width:480px;
+        height:480px;
+
+        bottom:-220px;
+
+        left:15%;
+
+    }
+
+
+
+    .blob4,
+    .blob5{
+
+        display:none;
+
+    }
+
+
+
+    .ambient{
+
+        filter:blur(80px);
+
+        opacity:.08;
+
+    }
+
+
+
+    .grain{
+
+        opacity:.015;
+
+    }
+
+}
+
+
+
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+@media (max-width:480px){
+
+
+    .blob{
+
+        filter:blur(50px);
+
+    }
+
+
+    .bg-gradient{
+
+        background:
+
+        linear-gradient(
+        180deg,
+        #0b0e15,
+        #080a0f
+        );
+
+    }
+
+}
+
+
+
+/* ==========================
+   REDUCE MOTION
+========================== */
+
+@media (prefers-reduced-motion:reduce){
+
+
+    .blob,
+    .ambient,
+    .grain{
+
+        animation:none !important;
+
+    }
+
+}

@@ -1,0 +1,25 @@
+.floating-icons{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+}
+
+.icon{
+    position:absolute;
+    font-size:32px;
+    animation:float 5s ease-in-out infinite;
+    opacity:.8;
+}
+
+.react{top:12%;left:8%;color:#61dafb;}
+.html{top:20%;right:12%;color:#ff5722;}
+.css{bottom:22%;left:10%;color:#2196f3;}
+.js{bottom:15%;right:15%;color:#ffd600;}
+.python{top:45%;left:3%;color:#4caf50;}
+.django{top:48%;right:4%;color:#2ecc71;}
+.git{bottom:8%;left:45%;color:#ff7043;}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-18px);}
+}

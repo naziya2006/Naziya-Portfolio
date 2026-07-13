@@ -1,0 +1,364 @@
+/* ==========================================
+   FADE UP
+========================================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp .8s ease forwards;
+}
+
+/* ==========================================
+   FADE DOWN
+========================================== */
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-down {
+  animation: fadeDown .8s ease forwards;
+}
+
+/* ==========================================
+   SLIDE LEFT
+========================================== */
+
+@keyframes slideLeft {
+
+  from {
+
+    opacity:0;
+
+    transform:translateX(-80px);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+  }
+
+}
+
+.slide-left{
+
+animation:slideLeft .8s ease forwards;
+
+}
+
+/* ==========================================
+   SLIDE RIGHT
+========================================== */
+
+@keyframes slideRight{
+
+from{
+
+opacity:0;
+
+transform:translateX(80px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+.slide-right{
+
+animation:slideRight .8s ease forwards;
+
+}
+
+/* ==========================================
+   FLOATING
+========================================== */
+
+@keyframes floating{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+}
+
+.float{
+
+animation:floating 5s ease-in-out infinite;
+
+}
+
+/* ==========================================
+   GLOW PULSE
+========================================== */
+
+@keyframes glowPulse{
+
+0%,100%{
+
+box-shadow:
+0 0 15px rgba(0,217,255,.2);
+
+}
+
+50%{
+
+box-shadow:
+0 0 40px rgba(108,99,255,.45);
+
+}
+
+}
+
+.glow{
+
+animation:glowPulse 3s infinite;
+
+}
+
+/* ==========================================
+   AURORA
+========================================== */
+
+@keyframes aurora{
+
+0%{
+
+transform:translateX(-40px)
+translateY(-20px)
+scale(1);
+
+}
+
+50%{
+
+transform:translateX(40px)
+translateY(30px)
+scale(1.15);
+
+}
+
+100%{
+
+transform:translateX(-40px)
+translateY(-20px)
+scale(1);
+
+}
+
+}
+
+/* ==========================================
+   SPIN
+========================================== */
+
+@keyframes slowSpin{
+
+from{
+
+transform:rotate(0);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+.spin{
+
+animation:slowSpin 30s linear infinite;
+
+}
+
+/* ==========================================
+   SHIMMER
+========================================== */
+
+@keyframes shimmer{
+
+0%{
+
+background-position:-500px;
+
+}
+
+100%{
+
+background-position:500px;
+
+}
+
+}
+
+.shimmer{
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.08),
+transparent
+);
+
+background-size:500px;
+
+animation:shimmer 2s infinite;
+
+}
+
+/* ==========================================
+   BLOB
+========================================== */
+
+@keyframes blob{
+
+0%{
+
+transform:
+translate(0,0)
+scale(1);
+
+}
+
+33%{
+
+transform:
+translate(40px,-30px)
+scale(1.08);
+
+}
+
+66%{
+
+transform:
+translate(-35px,20px)
+scale(.95);
+
+}
+
+100%{
+
+transform:
+translate(0,0)
+scale(1);
+
+}
+
+}
+
+/* ==========================================
+   BOUNCE
+========================================== */
+
+@keyframes bounceArrow{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(12px);
+
+}
+
+}
+
+.bounce{
+
+animation:bounceArrow 1.6s infinite;
+
+}
+
+/* ==========================================
+   SCALE IN
+========================================== */
+
+@keyframes scaleIn{
+
+from{
+
+opacity:0;
+
+transform:scale(.85);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+.scale-in{
+
+animation:scaleIn .6s ease forwards;
+
+}
+
+/* ==========================================
+   ROTATE GRADIENT
+========================================== */
+
+@keyframes rotateGradient{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}

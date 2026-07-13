@@ -1,0 +1,45 @@
+/* Global App Styles */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#070b1a;
+  color:var(--white);
+  overflow-x:hidden;
+  font-family:"Poppins",sans-serif;
+}
+
+#root{
+  width:100%;
+  min-height:100vh;
+}
+
+a{
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+#root{
+    position:relative;
+    min-height:100vh;
+}
+
+
+main,
+section,
+nav,
+footer{
+    position:relative;
+    z-index:2;
+}

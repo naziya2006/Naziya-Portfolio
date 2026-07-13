@@ -1,0 +1,194 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    background:rgba(7,11,26,.75);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav-container{
+
+    max-width:1300px;
+    margin:auto;
+
+    height:80px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 40px;
+
+}
+
+.logo{
+
+    font-size:30px;
+    font-weight:800;
+
+    color:white;
+    text-decoration:none;
+
+    letter-spacing:1px;
+
+}
+
+.logo span{
+
+    color:#00d9ff;
+
+}
+
+.nav-links{
+
+display:flex;
+align-items:center;
+gap:38px;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+color:#d8dff2;
+
+font-size:16px;
+
+font-weight:500;
+
+transition:.35s;
+
+position:relative;
+
+}
+
+.nav-links a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+bottom:-8px;
+
+width:0;
+
+height:2px;
+
+background:#00d9ff;
+
+transition:.35s;
+
+}
+
+.nav-links a:hover{
+
+color:#00d9ff;
+
+}
+
+.nav-links a:hover::after{
+
+width:100%;
+
+}
+
+.menu-btn{
+
+display:none;
+
+background:none;
+border:none;
+
+color:white;
+
+font-size:26px;
+
+cursor:pointer;
+
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media(max-width:992px){
+
+.nav-container{
+
+padding:0 25px;
+
+}
+
+.nav-links{
+
+position:fixed;
+
+top:80px;
+left:-100%;
+
+width:100%;
+height:calc(100vh - 80px);
+
+background:#070b1a;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+gap:35px;
+
+transition:.4s;
+
+}
+
+.nav-links.active{
+
+left:0;
+
+}
+
+.menu-btn{
+
+display:block;
+
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:576px){
+
+.logo{
+
+font-size:24px;
+
+}
+
+.nav-container{
+
+height:70px;
+
+}
+
+.nav-links{
+
+top:70px;
+height:calc(100vh - 70px);
+
+}
+
+}

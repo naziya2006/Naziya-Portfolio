@@ -1,0 +1,505 @@
+/* ==========================================
+              FOOTER
+========================================== */
+
+.footer{
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  padding:80px 8% 40px;
+}
+
+.footer-container{
+    position: relative;
+    z-index: 2;
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+}
+
+/* ==========================================
+          GALAXY BACKGROUND
+========================================== */
+
+.footer-bg{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.footer-glow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.35;
+    animation:footerFloat 10s ease-in-out infinite alternate;
+}
+
+.glow-one{
+    width:360px;
+    height:360px;
+    background:#7c3aed;
+    top:-120px;
+    left:-80px;
+}
+
+.glow-two{
+    width:320px;
+    height:320px;
+    background:var(--secondary);
+    right:-80px;
+    bottom:-120px;
+}
+
+@keyframes footerFloat{
+
+    from{
+        transform:translate(0,0);
+    }
+
+    to{
+        transform:translate(30px,-25px);
+    }
+
+}
+
+/* ==========================================
+                STARS
+========================================== */
+
+.footer-star{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:var(--white);
+    border-radius:50%;
+    box-shadow:
+0 0 35px rgba(124,92,255,.28),
+0 0 60px rgba(0,191,255,.15);
+    animation:twinkle 3s infinite;
+}
+
+.star-1{
+    top:15%;
+    left:15%;
+}
+
+.star-2{
+    top:28%;
+    right:22%;
+}
+
+.star-3{
+    bottom:22%;
+    left:30%;
+}
+
+.star-4{
+    bottom:15%;
+    right:15%;
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        opacity:.2;
+        transform:scale(.8);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.8);
+    }
+
+}
+
+/* ==========================================
+              NAME
+========================================== */
+
+.footer h2{
+
+    font-size:2.8rem;
+    color:var(--white);
+    font-weight:700;
+    margin-bottom:18px;
+
+}
+
+.footer h2 span{
+
+    color:var(--primary);
+
+}
+
+.footer-text{
+
+    color:var(--text);
+    font-size:1rem;
+    margin-bottom:45px;
+    letter-spacing:1px;
+
+}
+
+/* ==========================================
+            SOCIAL ICONS
+========================================== */
+
+.footer-socials{
+
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+
+}
+
+.footer-socials a{
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+
+    color:var(--white);
+
+    font-size:1.4rem;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.45s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* shine */
+
+.footer-socials a::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+
+    left:-40%;
+
+    width:45%;
+
+    height:300%;
+
+    background:rgba(255,255,255,.25);
+
+    transform:rotate(25deg);
+
+    transition:.7s;
+
+}
+
+.footer-socials a:hover::before{
+
+    left:140%;
+
+}
+
+.footer-socials a:hover{
+
+    transform:translateY(-8px) rotate(360deg);
+
+    border-color:var(--primary);
+
+    box-shadow:
+
+    0 0 20px rgba(124,92,255,.45),
+
+    0 0 40px rgba(0,191,255,.25);
+
+}
+/* ==========================================
+              DIVIDER
+========================================== */
+
+.footer-line{
+    width:100%;
+    max-width:850px;
+    height:1px;
+    margin:50px auto 30px;
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(124,92,255,.8),
+        rgba(0,191,255,.8),
+        transparent
+    );
+}
+
+/* ==========================================
+            COPYRIGHT
+========================================== */
+
+.copyright{
+    color:var(--muted);
+    font-size:.95rem;
+    letter-spacing:.5px;
+    line-height:1.8;
+}
+
+/* ==========================================
+          SCROLL TO TOP
+========================================== */
+
+.scroll-top{
+
+    position:absolute;
+
+    right:40px;
+    top:40px;
+
+    width:58px;
+    height:58px;
+
+    border:none;
+    outline:none;
+    cursor:pointer;
+
+    border-radius:50%;
+
+    color:var(--white);
+    font-size:1.2rem;
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    transition:.45s;
+
+    overflow:hidden;
+
+}
+
+.scroll-top::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(124,92,255,.25),
+        rgba(0,191,255,.15)
+    );
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+.scroll-top svg{
+    position:relative;
+    z-index:2;
+}
+
+.scroll-top:hover{
+
+    transform:translateY(-8px) scale(1.08);
+
+    box-shadow:
+        0 0 25px rgba(124,92,255,.45),
+        0 0 50px rgba(0,191,255,.25);
+
+}
+
+.scroll-top:hover::before{
+
+    opacity:1;
+
+}
+
+/* ==========================================
+            FOOTER FADE
+========================================== */
+
+.footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:75%;
+    height:1px;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(124,92,255,.6),
+        rgba(0,191,255,.6),
+        transparent
+    );
+
+}
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.footer{
+
+padding:70px 6% 35px;
+
+}
+
+.footer h2{
+
+font-size:2.2rem;
+
+}
+
+.footer-text{
+
+font-size:.95rem;
+
+margin-bottom:35px;
+
+}
+
+.footer-socials{
+
+gap:18px;
+
+}
+
+.footer-socials a{
+
+width:58px;
+height:58px;
+
+font-size:1.25rem;
+
+}
+
+.scroll-top{
+
+width:52px;
+height:52px;
+
+right:20px;
+top:25px;
+
+}
+
+.footer-line{
+
+margin:40px auto 25px;
+
+}
+
+}
+
+/* ==========================================
+            SMALL MOBILE
+========================================== */
+
+@media (max-width:480px){
+
+.footer{
+
+padding:60px 5% 30px;
+
+}
+
+.footer h2{
+
+font-size:1.9rem;
+
+}
+
+.footer-text{
+
+font-size:.9rem;
+
+line-height:1.7;
+
+}
+
+.footer-socials{
+
+gap:15px;
+
+}
+
+.footer-socials a{
+
+width:52px;
+height:52px;
+
+font-size:1.1rem;
+
+}
+
+.scroll-top{
+
+width:46px;
+height:46px;
+
+right:15px;
+top:20px;
+
+font-size:1rem;
+
+}
+
+.copyright{
+
+font-size:.82rem;
+
+line-height:1.8;
+
+}
+
+}
+
+/* ==========================================
+        SMOOTH ICON ANIMATION
+========================================== */
+
+.footer-socials a svg{
+
+transition:.45s;
+
+}
+
+.footer-socials a:hover svg{
+
+transform:scale(1.15);
+
+}

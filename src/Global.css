@@ -1,0 +1,90 @@
+:root{
+  --bg:#070b16;
+  --section:#0b1120;
+
+  --primary:#7c5cff;
+  --secondary:#00bfff;
+
+  --white:#ffffff;
+  --text:#bfc8dc;
+  --muted:#98a8c5;
+
+  --glass:rgba(255,255,255,.05);
+  --border:rgba(255,255,255,.08);
+
+  --shadow:
+    0 0 20px rgba(124,92,255,.45),
+    0 0 40px rgba(0,191,255,.25);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--white);
+  overflow-x:hidden;
+  font-family:"Poppins",sans-serif;
+}
+
+/* Common section */
+section{
+  position:relative;
+  background:transparent;
+}
+
+/* Common glass card */
+.glass-card{
+  background:var(--glass);
+  border:1px solid var(--border);
+  backdrop-filter:blur(20px);
+  border-radius:25px;
+}
+
+/* Common glow shadow */
+.glow{
+  box-shadow:var(--shadow);
+}
+/* Common Section Heading */
+
+.section-title{
+  font-size: clamp(2.2rem,5vw,3rem);
+  font-weight:700;
+  color:var(--white);
+}
+
+.section-subtitle{
+  color:var(--secondary);
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-size:.9rem;
+  font-weight:600;
+}
+
+.section-text{
+  color:var(--text);
+  line-height:1.8;
+}
+
+/* Common Glass */
+
+.glass{
+  background:var(--glass);
+  border:1px solid var(--border);
+  backdrop-filter:blur(20px);
+  border-radius:24px;
+}
+
+/* Common Hover */
+
+.glass:hover{
+  border-color:var(--primary);
+  box-shadow:var(--shadow);
+}

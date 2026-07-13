@@ -1,0 +1,215 @@
+/* ===========================
+   SCROLL PROGRESS
+=========================== */
+
+.scroll-progress-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  z-index: 9999;
+
+  background: rgba(255,255,255,0.03);
+
+  backdrop-filter: blur(10px);
+
+  overflow: hidden;
+}
+
+/* ===========================
+   PROGRESS BAR
+=========================== */
+
+.scroll-progress-bar {
+  position: relative;
+
+  height: 100%;
+  width: 0;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #3b82f6,
+    #38bdf8,
+    #67e8f9
+  );
+
+  background-size: 300%;
+
+  animation: gradientMove 5s linear infinite;
+
+  transition: width .15s linear;
+
+  box-shadow:
+    0 0 8px #3b82f6,
+    0 0 18px #38bdf8,
+    0 0 30px rgba(56,189,248,.5);
+}
+
+/* ===========================
+   MOVING STAR
+=========================== */
+
+.progress-star {
+
+  position: absolute;
+
+  right: -8px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow:
+    0 0 10px white,
+    0 0 20px #67e8f9,
+    0 0 35px #38bdf8;
+
+  animation:
+    pulseStar 1.5s ease-in-out infinite;
+}
+
+/* Tail */
+
+.progress-star::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  right: 8px;
+
+  transform: translateY(-50%);
+
+  width: 26px;
+  height: 2px;
+
+  background: linear-gradient(
+      to left,
+      rgba(255,255,255,.8),
+      transparent
+  );
+
+}
+
+/* ===========================
+   SHINE EFFECT
+=========================== */
+
+.scroll-progress-bar::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,.45),
+      transparent
+  );
+
+  animation:shine 2.5s linear infinite;
+
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes gradientMove{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:300%;
+}
+
+}
+
+@keyframes pulseStar{
+
+0%{
+
+transform:translateY(-50%) scale(.8);
+
+opacity:.6;
+
+}
+
+50%{
+
+transform:translateY(-50%) scale(1.3);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-50%) scale(.8);
+
+opacity:.6;
+
+}
+
+}
+
+@keyframes shine{
+
+0%{
+
+transform:translateX(-100%);
+
+}
+
+100%{
+
+transform:translateX(300%);
+
+}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.scroll-progress-wrapper{
+
+height:3px;
+
+}
+
+.progress-star{
+
+width:9px;
+height:9px;
+
+}
+
+.progress-star::after{
+
+width:18px;
+
+}
+
+}
