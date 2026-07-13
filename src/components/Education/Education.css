@@ -81,9 +81,9 @@
   background: rgba(255,255,255,.05);
   backdrop-filter: blur(22px);
 
-  border: 2px solid var(--primary);
+  border: 2px solid var(--clr);
 
-  color: var(--primary);
+  color: var(--clr);
 
   font-size: 42px;
 
@@ -100,7 +100,7 @@
 
   background: linear-gradient(
       to bottom,
-      var(--primary),
+      var(--clr),
       rgba(255,255,255,.15)
   );
 box-shadow:
@@ -174,7 +174,7 @@ box-shadow:
 .score-box h2 {
   margin-top: 8px;
   font-size: 38px;
-  color: var(--primary);
+  color: var(--clr);
 }
 
 /* ===========================
@@ -259,9 +259,9 @@ font-size:28px;
   transform: scale(1.15) rotate(8deg);
 
   box-shadow:
-      0 0 18px var(--primary),
-      0 0 35px var(--primary),
-      0 0 60px var(--primary);
+      0 0 18px var(--clr),
+      0 0 35px var(--clr),
+      0 0 60px var(--clr);
 }
 
 
@@ -346,8 +346,8 @@ font-size:28px;
 .timeline-item:hover .timeline-line {
 
   box-shadow:
-      0 0 20px var(--primary),
-      0 0 45px var(--primary);
+      0 0 20px var(--clr),
+      0 0 45px var(--clr);
 
 }
 

@@ -29,7 +29,7 @@ import { VscVscode } from "react-icons/vsc";
 const skills = [
   {
     title: "Frontend",
-    color: "var(--primary)",
+    color: "#7561fb",
     items: [
       { icon: <FaReact />, name: "React" },
       { icon: <FaHtml5 />, name: "HTML5" },

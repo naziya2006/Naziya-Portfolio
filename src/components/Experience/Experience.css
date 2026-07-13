@@ -35,10 +35,10 @@
     font-size:3rem;
     margin:15px 0;
 
-    background:linear-gradient(
+   background:linear-gradient(
         90deg,
         var(--white),
-        var(--primary),
+        #61DAFB,
         var(--secondary),
         var(--white)
     );
@@ -82,7 +82,7 @@ display:flex;
 
 flex-direction:column;
 
-gap:80px;
+gap:40px;
 
 }
 
@@ -104,7 +104,7 @@ border-radius:20px;
 
 background:linear-gradient(
 to bottom,
-var(--primary),
+var(--clr),
 var(--secondary)
 );
 

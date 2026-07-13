@@ -22,7 +22,7 @@ const experience = [
     role: "Python Full Stack Developer Intern",
     company: "Edufyi Tech Solutions",
     duration: "Apr 2026 - Jul 2026",
-    color: "var(--primary)",
+    color: "#8261fb",
 
     tech: [
       { name: "React", icon: <FaReact /> },
@@ -121,9 +121,9 @@ export default function Experience() {
               viewport={{ once: true }}
             >
 
-              {index !== experience.length - 1 && (
+            
                 <div className="timeline-line"></div>
-              )}
+              
 
               <div className="company-circle">
 

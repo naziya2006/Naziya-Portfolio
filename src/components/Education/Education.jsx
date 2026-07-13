@@ -20,7 +20,7 @@ const education = [
     year: "2023 - 2026",
     cgpa: 8.48,
     sgpa: 9.2,
-    color: "var(--primary)",
+    color: "#ae61fb",
   },
 
   {
