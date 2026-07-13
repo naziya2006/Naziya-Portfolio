@@ -112,7 +112,7 @@
 
   position:absolute;
 
-  top:85px;
+  top:87px;
 
   left:0;
 
@@ -153,26 +153,25 @@
 
 
 /* Skill box above line */
-
 .skill-box {
   width: clamp(45px, 12vw, 90px);
   height: clamp(50px, 12vw, 75px);
 
   background: rgba(255,255,255,.05);
   border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 14px;
+  border-radius:14px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
 
-  gap: 4px;
+  gap:4px;
 
-  backdrop-filter: blur(22px);
-  transition: .3s;
+  backdrop-filter:blur(22px);
+  transition:.3s;
 
-  margin-bottom: 15px;
+  margin-bottom:15px;
 }
 
 
@@ -188,27 +187,20 @@
 
 
 /* Dot exactly on line */
-
 .node-dot {
-
   width:18px;
-
   height:18px;
 
   background:var(--line);
-
   border-radius:50%;
 
   position:absolute;
 
-  top:78px;
+  top:80px;
 
   box-shadow:
-
   0 0 15px var(--line),
-
   0 0 30px var(--line);
-
 }
 
 
@@ -254,14 +246,40 @@
     display:none;
 }
 
-.track-line{
-    display:block;
-    top:120px;
+.track-line {
+  position:absolute;
+
+  top:95px;
+
+  left:0;
+
+  width:100%;
+  height:4px;
+
+  background:linear-gradient(
+    90deg,
+    var(--line),
+    rgba(255,255,255,0.2)
+  );
+
+  border-radius:10px;
 }
 
-.node-dot{
-    display:block;
-    top:80px;
+.node-dot {
+  width:14px;
+  height:14px;
+
+  background:var(--line);
+  border-radius:50%;
+
+  position:absolute;
+
+  top:95px;
+  transform:translateY(-50%);
+
+  box-shadow:
+  0 0 12px var(--line),
+  0 0 25px var(--line);
 }
 
 }
@@ -322,7 +340,7 @@
   backdrop-filter:blur(22px);
   transition:.3s;
 
-  margin-bottom:20px;
+  margin-bottom:40px;
 }
 
 .icon {
@@ -336,7 +354,7 @@
 }
 
 .track-line{
-    top:105px;
+    top:102px;
 }
 
 .node-dot {
@@ -348,7 +366,8 @@
 
   position:absolute;
 
-  top:96px;
+  top:87px;
+  transform:translateY(-50%);
 
   box-shadow:
   0 0 15px var(--line),
