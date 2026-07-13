@@ -20,7 +20,7 @@ export default function Navbar() {
           <a href="#about" onClick={() => setMenu(false)}>About</a>
           <a href="#education" onClick={() => setMenu(false)}>Education</a>
           <a href="#skills" onClick={() => setMenu(false)}>Skills</a>
-          <a href="#experiencee" onClick={() => setMenu(false)}>Experience</a>
+          <a href="#experience" onClick={() => setMenu(false)}>Experience</a>
           <a href="#projects" onClick={() => setMenu(false)}>Projects</a>
           <a href="#contact" onClick={() => setMenu(false)}>Contact</a>
 
