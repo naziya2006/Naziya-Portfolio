@@ -135,19 +135,18 @@
 }
 
 
-/* Each skill */
-
 .skill-node {
   position: relative;
-
   z-index: 2;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 
-  flex: 1;
-  min-width: 0;
+  flex:1;
+  min-width:0;
+
+  height:110px;
 }
 
 
@@ -196,7 +195,8 @@
 
   position:absolute;
 
-  top:80px;
+  top:87px;
+  transform:translateY(-50%);
 
   box-shadow:
   0 0 15px var(--line),
@@ -340,7 +340,7 @@
   backdrop-filter:blur(22px);
   transition:.3s;
 
-  margin-bottom:40px;
+  margin-bottom:20px;
 }
 
 .icon {
@@ -358,15 +358,15 @@
 }
 
 .node-dot {
-  width:18px;
-  height:18px;
+  width:16px;
+  height:16px;
 
   background:var(--line);
   border-radius:50%;
 
   position:absolute;
 
-  top:87px;
+  top:102px;
   transform:translateY(-50%);
 
   box-shadow:
